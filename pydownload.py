@@ -47,3 +47,13 @@ if st.button("Download"):
             st.error("Failed to download. Please check the URL and try again.")
     else:
         st.warning("Please enter a valid YouTube URL.")
+
+
+
+
+ad_code = """
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2102345545169156"
+     crossorigin="anonymous"></script>
+"""
+
+st.components.v1.html(ad_code, height=100)
