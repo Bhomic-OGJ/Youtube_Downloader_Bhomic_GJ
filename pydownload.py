@@ -1,6 +1,7 @@
 import streamlit as st
 from pytubefix import YouTube
 import os
+from PIL import Image
 
 def download_video(url, download_audio=False):
     try:
@@ -57,3 +58,17 @@ ad_code = """
 """
 
 st.components.v1.html(ad_code, height=100)
+
+# QR Code for Support
+st.markdown("---")
+st.subheader("☕ Support this app")
+
+# buymeacoffee_url = "https://www.buymeacoffee.com/yourusername"  # Replace with your actual link
+qr_path = "qr.jpeg"
+
+image = Image.open(qr_path)
+st.image(image, caption="Scan to Buy Me a Coffee", width=200)
+# st.markdown(f"[Or click here to support]({buymeacoffee_url})")
+
+
+
